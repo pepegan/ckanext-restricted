@@ -48,7 +48,8 @@ class RestrictedPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     # ITemplateHelpers
     def get_helpers(self):
-        return {'restricted_get_user_id': helpers.restricted_get_user_id}
+        return {'restricted_get_as_dict': helpers.restricted_get_as_dict,
+                'restricted_get_user_id': helpers.restricted_get_user_id}
 
     # IAuthFunctions
     def get_auth_functions(self):

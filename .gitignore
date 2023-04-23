@@ -43,3 +43,7 @@ docs/_build/
 
 # OSX 
 .DS_Store
+
+
+.idea/*
+**/__pycache__

@@ -46,7 +46,7 @@ def restricted_request_access_form(package_id, resource_id, data=None, errors=No
     try:
         context = {'model': model, "session": model.Session,
                    'user': g.user,
-                   'auth_user_obj': base.c.userobj}
+                   'auth_user_obj': base.g.userobj}
         logic.check_access('site_read', context)
     except logic.NotAuthorized:
         base.abort(401, _('Not authorized to see this page'))
